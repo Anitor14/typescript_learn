@@ -22,6 +22,25 @@ class Person {
         this.id = id;
         this.name = name;
     }
+    register() {
+        return `${this.name} is now registered`;
+    }
 }
 const anitor = new Person(1, "Anitor Abraham");
 const beauty = new Person(2, "Beauty Awajinte");
+// subclasses.
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Godswill", "Developer");
+//Generics 
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["brad", "john", "jill"]);
+strArray.push();
+// we have either 1.Public 2.Private 3.Protected.
